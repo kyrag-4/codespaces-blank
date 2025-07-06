@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Charity Water Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: proxima nova, avenir;
+      background-color: #572f23; /* lighter brown background */
+      color: white;
+    }
+    header {
+      background-color: #fdd835; /* yellow header */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    header .logo {
+      background-color: white;
+      color: black;
+      padding: 5px 10px;
+      font-weight: bold;
+    }
+    header nav button {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+    header nav button:hover {
+      background-color: #333;
+    }
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      justify-content: space-between;
+    }
+    .content {
+      flex: 1 1 45%;
+      margin-bottom: 20px;
+    }
+    .content h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .content p {
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .donation-box {
+      background-color: #f5e1c1;
+      color: black;
+      padding: 15px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .donation-box button {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .donation-box button:hover {
+      background-color: #333;
+    }
+    .image-section {
+      flex: 1 1 45%;
+    }
+    .image-section img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    .highlight {
+      background-color: #fdd835;
+      color: black;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 5px;
+    }
+    footer {
+      display: flex;
+      justify-content: center;
+      background-color: #2c1c17;
+      padding: 15px;
+    }
+    footer a {
+      color: #ccc;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+        align-items: center;
+      }
+      .content, .image-section {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">charity: water</div>
+    <nav>
+      <button>About Us</button>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <div class="content">
+      <h1>Clean Water for Everyone: The Chance for Safe Drinking Water Around the World</h1>
+      <p>
+        At charity: water, we're on a mission to provide everyone across the world the chance to have safe, clean, and quality drinking water.
+      </p>
+      <div class="donation-box">
+        <span>Your Donation Can Transform a Life</span>
+        <button>Donate Now</button>
+      </div>
+    </div>
+    <div class="image-section">
+      <img src="https://africanchildtrust.org.uk/wp-content/uploads/2017/09/a2-1.jpg" alt="Children smiling with food" />
+    </div>
+  </main>
+
+  <!-- Highlight section -->
+  <section class="highlight">
+    Clean and quality water should be accessible to everyone across our planet. At charity: water, our mission is to achieve that goal and give every person the chance to drink non-harmful water.
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <a href="#">How to Help</a>
+    <a href="#">What We Do</a>
+    <a href="#">Contact Us</a>
+  </footer>
+
+</body>
+</html>
+<!-- Confetti JS -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    const donateBtn = document.getElementById('donateBtn');
+    donateBtn.addEventListener('click', function() {
+      confetti({
+        particleCount: 150,
+        spread: 60,
+        origin: { y: 0.6 }
+      });
+    });
+  </script>
+
+</body>
+</html>
